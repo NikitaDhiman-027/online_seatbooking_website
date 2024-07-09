@@ -1,0 +1,140 @@
+/* Reset default styles for better consistency */
+body, h1, h2, p, label, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('./nick-baker-VuPIUePS_vU-unsplash.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.navbar {
+    background-color: #333; /* Dark background for navbar */
+    overflow: hidden;
+    padding: 5px 0;
+    margin-top: 0; /* Align navbar at the very top */
+    width: 100%; /* Full width */
+    position: fixed; /* Fixed positioning to keep it at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure the navbar is on top */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: #444;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    background-color: #ffc107; /* Darker background for hover effect */
+    color: #333;
+}
+
+.container {
+    max-width: 300px;
+    margin: 100px;
+    padding: 15px; /* Reduce padding */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    float: left; /* Align to the left */
+    box-shadow: 0px 10px 50px rgba(224, 224, 21, 0.936);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px; /* Reduce margin bottom */
+}
+
+.form-group {
+    margin-bottom: 10px; /* Reduce margin bottom */
+    box-shadow: 0px 10px 50px rgba(220, 223, 61, 0.5);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.form-group:hover {
+    transform: translateY(-5px); /* Lift the form slightly on hover */
+    box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.8); /* Increase box shadow on hover */
+    background-color: #dad736/* Lighten background color on hover */
+}
+
+
+label {
+    display: block;
+    margin-bottom: 3px; /* Reduce margin bottom */
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 8px; /* Reduce padding */
+    margin-bottom: 10px; /* Reduce margin bottom */
+    border: 1px solid #c258e2;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+button {
+    background-color: #1173b4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 0.9rem;
+}
+
+button:hover {
+    background-color: #31f05e;
+}
+.back-to-main {
+    color: white;
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Optional: Add padding for better click area */
+    background-color: #333; /* Optional: Add background color */
+    border-radius: 4px; /* Optional: Add rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Optional: Add transitions */
+}
+
+.back-to-main:hover {
+    background-color: #555; /* Optional: Darker shade for hover effect */
+    color: white; /* Optional: Ensure text color remains white on hover */
+}
+

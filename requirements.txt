@@ -1,0 +1,5 @@
+Flask==2.0.1
+Flask-WTF==0.15.1
+Flask-SQLAlchemy==3.0.0
+email_validator==1.1.3
+

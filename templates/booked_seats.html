@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booked Seats - iTravel</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='book_seat.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('help') }}">Help</a></li>
+            <li><a href="{{ url_for('booked_seats') }}">View Booked Seats</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <header>
+            <h1>Booked Seats</h1>
+        </header>
+        
+        <div class="container-booked-seats">
+            <ul>
+                {% for seat in booked_seats %}
+                    <li>Seat {{ seat.seat_number }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 iTravel - Book My Seat. All rights reserved.</p>
+    </footer>
+</body>
+</html>

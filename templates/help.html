@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='help.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('help') }}">Help</a></li>
+        </ul>
+        <a href="{{ url_for('index') }}" class="back-to-main">Back to Main Page</a>
+    </nav>
+    <header>
+        
+        <h1>How can I help?</h1>
+    </header>
+    <main>
+        <div class="center-content">
+            <img src="{{ url_for('static', filename='help_img.png') }}" alt="Help Image">
+            <form method="post">
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    {{ form.name.label }} {{ form.name() }}
+                </div>
+                <div class="form-group">
+                    {{ form.email.label }} {{ form
+                        .email() }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.message.label }} {{ form.message() }}
+                    </div>
+                    <button type="submit">{{ form.submit.label }}</button>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2023 iTravel. All rights Reserved</p>
+        </footer>
+    </body>
+    </html>
+    

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book My Seat</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        function bookSeat(seatNumber) {
+            fetch('/book_seat', {
+                method: 'POST',
+                body: new URLSearchParams({
+                    'seat_number': seatNumber
+                }),
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.text();  // Get the response text (message)
+                }
+                throw new Error('Network response was not ok.');
+            })
+            .then(message => {
+                alert(message);  // Display the success message
+                window.location.href = '/';  // Refresh the page to update seat status
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Booking failed. Please try again.');  // Display error message if any
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('help') }}">Help</a></li>
+            <li><a href="{{ url_for('booked_seats') }}">View Booked Seats</a></li> 
+        </ul>
+    </nav>
+
+    <main class="container">
+        <header>
+            <div class="container-iTravel">
+                <h1 class="iTravel"> iTravel</h1>
+                <p>Welcome to iTravel<br>
+                Your ultimate destination for bus seat booking.
+                
+                At iTravel, we strive to make your bus travel experience as seamless and comfortable as possible. </p>
+                </div>
+        </header>
+        
+        <div class="image-container">
+            <div class="image-box image-box-left1">
+                <img src="{{ url_for('static', filename='nick-baker-VuPIUePS_vU-unsplash.jpg') }}" alt="Bus Image">
+            </div>
+            <div class="image-box image-box-left">
+                <img src="{{ url_for('static', filename='25778175.jpg') }}" alt="Bus Image">
+            </div>
+            <div class="image-box image-box-right">
+                <img src="{{ url_for('static', filename='image.png') }}" alt="Second Image">
+            </div>
+            <div class="image-box image-box-right">
+                <img src="{{ url_for('static', filename='24541604.jpg') }}" alt="Second Image">
+            </div>
+        </div>
+        
+
+        <div class="booking-container">
+            <h1 class="Online-Booking"> Online Bus Booking      <h1>
+        </div>
+        
+        <div class="container-available-seats">
+            <h1 class="available-seats">Available Seats</h1>
+            <ul>
+                {% for seat in seats %}
+                    <li>
+                        {{ seat.seat_number }}
+                        {% if not seat.is_booked %}
+                            <button type="button" onclick="bookSeat({{ seat.seat_number }})">Book</button>
+                        {% else %}
+                            <span>Booked</span>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+    </main>
+
+    <div class="booking-description">
+        <p>Our user-friendly platform allows you to book your bus seats with ease, ensuring a hassle-free journey every time. Whether you're planning a short trip or a long-distance journey, iTravel has got you covered.</p>
+    </div>
+    
+
+    <footer class="footer">
+        <p>&copy; 2024 Book My Seat. All rights reserved.</p>
+    </footer>
+</body>
+</html>

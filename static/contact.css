@@ -1,0 +1,202 @@
+/* Reset default styles for better consistency */
+body, h1, h2, p, label, input, textarea, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(237, 237, 171);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 0; /* Remove previous margin-top */
+    margin-bottom: 100px;
+}
+
+/* Navbar styling */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    margin-top: 0; /* Align navbar at the very top */
+    position: fixed; /* Fixed positioning to keep it at the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure navbar is above other content */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: #ffc107; /* Change color on hover as desired */
+}
+
+/* Content section */
+.content {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+.img {
+    width: 100%; /* Full width */
+    max-width: 300px; /* Max width for responsiveness */
+    margin-right: 20px; /* Space between image and form */
+    overflow: hidden; /* Ensure rounded corners clip correctly */
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-top: 150px;
+}
+
+.img img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(146, 6, 189, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.img:hover img {
+    transform: translateY(-5px); /* Scale up the image on hover */
+    box-shadow: 0 8px 20px rgba(123, 7, 186, 0.642), 0 0 40px rgba(141, 255, 83, 0.849); /* Increase box shadow on hover */
+    background-color: rgba(161, 25, 180, 0.95);
+}
+
+.contact-me {
+    width: 100%; /* Full width */
+    max-width: 400px; /* Max width for responsiveness */
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0px 10px 50px rgba(150, 10, 197, 0.5);
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-top: 150px;
+}
+
+.contact-me:hover {
+    transform: translateY(-5px); /* Lift the form slightly on hover */
+    box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.8); /* Increase box shadow on hover */
+    background-color: #ffc107/* Lighten background color on hover */
+}
+
+.contact-me h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-element {
+    width: 100%;
+}
+
+.form-grp {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 20px); /* Adjust width to accommodate padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #1173b4;
+    box-shadow: 0 0 5px rgba(17, 115, 180, 0.5);
+}
+
+.submit {
+    background-color: #1173b4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 0.9rem;
+}
+
+.submit:hover {
+    background-color: #31f05e;
+    color: black;
+}
+
+/* Styles for social links */
+.social-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.0rem;
+    background-color: #333;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    background-color: #555; /* Darker background on hover */
+    transform: translateY(-3px); /* Move the link up slightly */
+    color: #ffc107; /* Change color on hover as desired */
+    
+}
+
+/* Example for Facebook icon */
+.facebook-icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+.facebook-icon:hover {
+    transform: scale(1.1); /* Scale up the Facebook icon on hover */
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+}

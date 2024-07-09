@@ -1,0 +1,327 @@
+/* Reset default styles for better consistency */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+
+/* Navbar styles */
+/* Navbar styles */
+nav {
+    background-color: #333; /* Dark background for navbar */
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+   
+}
+
+nav ul li {
+    display: inline-block; /* Ensure list items are displayed in a line */
+    margin: 0 15px; /* Adjust margin between list items */
+}
+
+nav ul li a {
+    color: #0a0909; /* White text color */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid transparent; /* Transparent border by default */
+    border-radius: 5px; /* Rounded corners */
+}
+
+nav ul li a:hover {
+    max-width: auto;
+    background-color: #424040; /* Darker background on hover */
+    color: #ffc107; /* Yellow text color on hover */
+}
+
+/* Styling for the second-last link */
+nav ul li:nth-last-child(2) a {
+    max-width: auto;
+    color: #000; /* Black text */
+}
+
+/* Styling for the first h1 element (iTravel) */
+.container-iTravel {
+    padding: 20px;
+    text-align: center;
+    max-width: 100%;
+    margin: 20px auto;
+    background-color: rgba(239, 234, 105, 0.9); /* Semi-transparent background */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+}
+
+h1.iTravel {
+    font-size: 3rem; /* Large size */
+    color: #2142d6; /* Initial color */
+    text-align: center; /* Center align */
+    margin: 20px 0;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    animation: pulse 2s infinite; /* Animation */
+}
+
+/* Hover effect for the first h1 */
+h1.iTravel:hover {
+    color: #ffc107; /* Change color on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+/* Keyframes for the pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Image container styles */
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Evenly distribute space between items */
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 30px 0; /* Adjust top and bottom padding */
+    box-sizing: border-box;
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+.image-box-left1{
+    
+        flex: 0 0 auto; /* Non-flexible, auto width */
+        width: 24%; /* Equal width for all image boxes */
+        margin: 0 5px; /* Adjust spacing between image boxes */
+        overflow: hidden; /* Ensure images do not overflow their containers */
+        border-radius: 5px; /* Rounded corners */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        position: relative; /* Positioning context for absolute overlay */
+    
+}
+                
+.image-box-left{
+    
+        flex: 0 0 auto; /* Non-flexible, auto width */
+        width: 24%; /* Equal width for all image boxes */
+        margin: 0 5px; /* Adjust spacing between image boxes */
+        overflow: hidden; /* Ensure images do not overflow their containers */
+        border-radius: 5px; /* Rounded corners */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        position: relative; /* Positioning context for absolute overlay */
+    
+}
+               
+.image-box-right{
+    flex: 0 0 auto; /* Non-flexible, auto width */
+    width: 24%; /* Equal width for all image boxes */
+    margin: 0 5px; /* Adjust spacing between image boxes */
+    overflow: hidden; /* Ensure images do not overflow their containers */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    position: relative; /* Positioning context for absolute overlay */
+
+
+}
+.image-box-right{
+    flex: 0 0 auto; /* Non-flexible, auto width */
+    width: 24%; /* Equal width for all image boxes */
+    margin: 0 5px; /* Adjust spacing between image boxes */
+    overflow: hidden; /* Ensure images do not overflow their containers */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    position: relative; /* Positioning context for absolute overlay */
+
+
+}
+                
+.image-box img {
+    width: 100%; /* Ensure image takes full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any potential extra spacing */
+    border-radius: 5px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.image-box:hover img {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Fade-in transition */
+    border-radius: 5px; /* Match image box border radius */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-box:hover .image-overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.image-overlay-text {
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.booking-container {
+    position: relative; /* Ensure text sizing remains relative to container */
+    background-color: #8d53ea; /* Blue background color */
+    text-align: center;
+    max-width: auto; /* Adjust max-width as needed */
+    margin: auto;
+    padding: 20px; /* Added padding for better readability */
+    background-color: rgba(206, 191, 55, 0.9); /* Semi-transparent background */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Change cursor on hover */
+    overflow: hidden; /* Hides overflowing content */
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+
+.booking-container h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.5rem; /* Example font size */
+    color: #f8fbfb; /* Example text color */
+    animation: moveLeftToRight 20s linear infinite; /* Animation for moving text */
+}
+
+@keyframes moveLeftToRight {
+    0% {
+        transform: translateX(-100%); /* Starts from the left corner */
+    }
+    100% {
+        transform: translateX(100%); /* Moves text 100% to the right */
+    }
+}
+
+/* Styling for the second h1 element (Available Seats) */
+
+.container-available-seats {
+    padding: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+h1.available-seats {
+    font-size: 2.5rem; /* Large size */
+    color: #ffc107; /* Initial color */
+    text-align: left; /* Left align */
+    margin: 20px 0;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    animation: fadeIn 3s ease-in-out; /* Animation */
+}
+
+/* Hover effect for the second h1 */
+h1.available-seats:hover {
+    color: #FF5722; /* Change color on hover */
+    transform: translateX(10px); /* Slightly move right on hover */
+}
+
+/* Keyframes for the fadeIn animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Page container */
+
+/* Header styles */
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* List styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #f2f2f2;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black; /* Green for book link */
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid #ffc107;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+ul li a:hover {
+    background-color: #ffc107;
+    color: white;
+}
+
+ul li span {
+    color: #999; /* Grey for booked text */
+}
+
+
+.booking-description {
+    margin-top: 20px; /* Example margin for spacing */
+    padding: 20px; /* Example padding for spacing and styling */
+    background-color: #f0f0f0; /* Example background color */
+    border: 1px solid #ccc; /* Example border for container */
+    border-radius: 5px; /* Example border radius for rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Example box shadow for depth */
+}
+
+/* Footer styles */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}

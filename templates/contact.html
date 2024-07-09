@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='contact.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('help') }}">Help</a></li>
+        
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <div class="img">
+                <img src="{{ url_for('static', filename='contact_us.jpg') }}" alt="Contact Us Image">
+            </div>
+            <div class="contact-me">
+                <h1>Contact Us</h1>
+                <div class="form-element">
+                    <form action="{{ url_for('contact') }}" method="post">
+                        <div class="form-grp">
+                            <label for="uname">Name:</label>
+                            <input type="text" id="uname" name="name" required>
+                        </div>
+                        <div class="form-grp">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-grp">
+                            <input type="submit" value="Submit" class="submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="social-links">
+        <a href="https://www.facebook.com/" class="facebook-icon">Facebook</a>
+        <a href="https://twitter.com/" class="twitter-icon">Twitter</a>
+        <a href="https://www.instagram.com/" class="instagram-icon">Instagram</a>
+        <a href="https://www.linkedin.com/" class="linkedin-icon">LinkedIn</a>
+    </div>
+
+    <script src="script.js"></script>
+    
+
+    <a href="{{ url_for('index') }}" class="back-to-main">Back to Main Page</a>
+</body>
+</html>
